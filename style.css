@@ -104,6 +104,70 @@ h2 {
     background: #14803a;
 }
 
+/* Footer Styles */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.heart {
+    color: #ff3366;
+    display: inline-block;
+    animation: heartbeat 1.5s infinite;
+    margin: 0 5px;
+}
+
+.author-link {
+    color: #1db954;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.author-link:hover {
+    color: #fff;
+}
+
+.author-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.author-link:hover::after {
+    width: 100%;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 600px) {
     h2 {
